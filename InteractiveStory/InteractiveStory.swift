@@ -101,17 +101,17 @@ struct Adventure {
         let rover = touchdown.addChoice(title: "Explore the Rover", story: .Rover)
         let crate = touchdown.addChoice(title: "Open the Crate", story: .Crate)
         
-        let mars = homeward.addChoice(title: "Head Back to Mars", page: touchdown)
+        _ = homeward.addChoice(title: "Head Back to Mars", page: touchdown)
         let home = homeward.addChoice(title: "Continue Home to Earth", story: .Home)
         
         let cave = rover.addChoice(title: "Explore the Coordinates", story: .Cave)
-        rover.addChoice(title: "Return to Earth", page: home)
+        _ = rover.addChoice(title: "Return to Earth", page: home)
         
-        cave.addChoice(title: "Continue towards faint light", story: .Droid)
-        cave.addChoice(title: "Refill the ship and explore the rover", page: rover)
+        _ = cave.addChoice(title: "Continue towards faint light", story: .Droid)
+        _ = cave.addChoice(title: "Refill the ship and explore the rover", page: rover)
         
-        crate.addChoice(title: "Explore the Rover", page: rover)
-        crate.addChoice(title: "Use the key", story: .Monster)
+        _ = crate.addChoice(title: "Explore the Rover", page: rover)
+        _ = crate.addChoice(title: "Use the key", story: .Monster)
         
         return returnTrip
     }
