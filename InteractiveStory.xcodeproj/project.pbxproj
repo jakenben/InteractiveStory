@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					B2AD52181DF3960C002998CD = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 2FWMUJZS4Z;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -258,6 +259,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2FWMUJZS4Z;
 				INFOPLIST_FILE = InteractiveStory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.jakesager.InteractiveStory;
@@ -270,6 +272,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2FWMUJZS4Z;
 				INFOPLIST_FILE = InteractiveStory/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.jakesager.InteractiveStory;
