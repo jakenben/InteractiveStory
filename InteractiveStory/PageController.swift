@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class PageController: UIViewController {
     
@@ -17,6 +18,8 @@ class PageController: UIViewController {
     let storyLabel = UILabel()
     let firstChoiceButton = UIButton(type: .system)
     let secondChoiceButton = UIButton(type: .system)
+    
+    var sound: SystemSoundID = 0
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -30,8 +33,6 @@ class PageController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-
-        // Do any additional setup after loading the view.
         if let page = page {
             artwork.image = page.story.artwork
             let attributedString = NSMutableAttributedString(string: page.story.text)
@@ -106,7 +107,7 @@ class PageController: UIViewController {
         if let page = page, let firstChoice = page.firstChoice {
             let nextPage = firstChoice.page
             let pageController = PageController(page: nextPage)
-            
+            playSound(url: nextPage.story.soundEffectURL)
             navigationController?.pushViewController(pageController, animated: true)
         }
     }
@@ -115,7 +116,7 @@ class PageController: UIViewController {
         if let page = page, let secondChoice = page.secondChoice {
             let nextPage = secondChoice.page
             let pageController = PageController(page: nextPage)
-            
+            playSound(url: nextPage.story.soundEffectURL)
             navigationController?.pushViewController(pageController, animated: true)
         }
     }
@@ -123,6 +124,11 @@ class PageController: UIViewController {
     
     func playAgain() {
         _ = navigationController?.popToRootViewController(animated: true)
+    }
+    
+    func playSound(url: URL) {
+        AudioServicesCreateSystemSoundID(url as CFURL, &sound)
+        AudioServicesPlaySystemSound(sound)
     }
     
     

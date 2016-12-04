@@ -26,8 +26,8 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ykc-nQ-wMG">
-                                <rect key="frame" x="133" y="589" width="108" height="30"/>
-                                <state key="normal" title="Start Adventure"/>
+                                <rect key="frame" x="65" y="589" width="244" height="30"/>
+                                <state key="normal" title="Start Your Journey To The Cosmos!"/>
                                 <connections>
                                     <segue destination="rkY-w5-TJD" kind="show" identifier="startAdventure" id="mTT-vQ-if6"/>
                                 </connections>
